@@ -1,0 +1,138 @@
+body, html {
+  height: 100%;
+}
+
+.home-header {
+  background-color: $deep;
+  height: 100%;
+  color: #fff;
+  padding-top: $size;
+
+  .top-line {
+    position: absolute;
+    width: 100%;
+    height: $size;
+    top: 0;
+    border-bottom: 1px solid rgba(#fff, $border-opocity);
+    z-index: 10;
+    background-color: $deep;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .5em;
+    color: #fff;
+    text-decoration: none;
+
+    .logo__img-wrapper {
+      width: $size;
+      height: $size;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .menu-button-container {
+    flex: 0 0 200px;
+    text-align: right;
+    height: $size;
+    position: relative;
+
+    .menu-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $size;
+      height: $size;
+      background-color: #3c3c3c;
+      background-image: url("../../../images/dist/menu.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 40%;
+      transition: background .25s ease-out;
+
+      &:hover {
+        background-color: $accent;
+      }
+    }
+  }
+
+  .top-line__decoration {
+    flex: 1 0 0;
+    text-align: center;
+
+    &:before {
+      content: '';
+      height: 1px;
+      width: 50px;
+      background-color: #fff;
+      display: inline-block;
+      opacity: $border-opocity*2;
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  .top-line__contacts {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .4em;
+    color: rgba(#fff, .5);
+    display: flex;
+    align-items: center;
+
+    .top-line__separator {
+      width: 1px;
+      height: 30px;
+      background-color: rgba(#fff, $border-opocity*2);
+      margin: 0px 20px;
+    }
+  }
+
+  .top-line__numbers, .top-line__text {
+    margin-left: 7px;
+
+    a {
+      color: $accent;
+    }
+  }
+
+  .top-line__numbers, {
+    color: $accent;
+  }
+
+  .top-line__text {
+    color: rgba(#fff, .75);
+  }
+
+  //  aside
+
+  .home-header__content {
+    height: 100%;
+
+    .home-aside {
+      background-color: $dark;
+      width: $size;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      padding-top: $size;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+  }
+
+}
