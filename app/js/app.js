@@ -1,6 +1,6 @@
-import {Swiper, Parallax, Mousewheel,} from 'swiper'
+import {Swiper, Parallax, Mousewheel, Controller} from 'swiper'
 
-Swiper.use([Parallax, Mousewheel])
+Swiper.use([Parallax, Mousewheel, Controller])
 
 // // Import jQuery module (npm i jquery)
 // import $ from 'jquery'
@@ -20,9 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
         loop: false,
         speed: 2400,
         parallax: true,
-        mousewheel:{
+
+    });
+
+
+    const swiperText = new Swiper('.slider-text', {
+        loop: false,
+        speed: 2400,
+        mousewheel: {
             invert: true,
         }
     });
 
+    swiperIMG.controller.control = swiperText
+    swiperText.controller.control = swiperIMG
 })
