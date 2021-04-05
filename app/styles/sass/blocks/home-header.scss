@@ -132,7 +132,183 @@ body, html {
       align-items: center;
       justify-content: center;
       z-index: 5;
+
+      .home-aside__decoration {
+        flex: 1 0 0;
+        background-image: url("../../../images/dist/line.svg");
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+      }
+
+      .home-aside__soc {
+        flex: 1 0 0;
+
+        .home-aside_soc-items {
+          .soc-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(#fff, $border-opocity*5);
+            margin-top: -1px;
+            border-bottom: 1px solid transparent;
+            transition: background .5s ease-out;
+
+            &:last-child {
+              border-bottom: 1px solid rgba(#fff, $border-opocity*5);
+            }
+
+            img {
+              width: 15px;
+              height: auto;
+              max-height: 15px;
+              opacity: .3;
+              transition: opacity .5s ease-out;
+            }
+
+            &:hover {
+              background-color: $accent;
+
+              img {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .home-aside__share-icon {
+        background-color: $accent;
+        width: $size;
+        flex: 0 0 $size;
+        background-image: url("../../../images/dist/share-option.svg");
+        background-size: 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
+
+
+    //  slider
+    .slider-container {
+      padding-left: $size;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+
+      .slider-img {
+        height: 100%;
+        width: calc(75% - 70px);
+        overflow: hidden;
+        position: absolute;
+
+        .slider-img__slide {
+          height: 100%;
+          overflow: hidden;
+
+          .slider-img-bg {
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+      }
+
+      //  slider-bottom
+      .slider-bottom {
+        position: absolute;
+        bottom: 0;
+        left: $size;
+        width: calc(75% - #{$size});
+        height: $size;
+        display: flex;
+        align-items: center;
+        background-color: #666666;
+        z-index: 5;
+
+        .slider-share {
+          flex: 0 1 auto;
+
+          .slider-share__items {
+            display: flex;
+            position: relative;
+            bottom: -1px;
+
+            .soc-item {
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid rgba(#fff, $border-opocity*5);
+              margin-top: -1px;
+              border-bottom: 1px solid transparent;
+              transition: background .5s ease-out;
+
+              &:last-child {
+                border-bottom: 1px solid rgba(#fff, $border-opocity*5);
+              }
+
+              img {
+                width: 15px;
+                height: auto;
+                max-height: 15px;
+                opacity: .3;
+                transition: opacity .5s ease-out;
+              }
+
+              &:hover {
+                background-color: $accent;
+
+                img {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .slider-share__item {
+              width: $size;
+              height: $size;
+              border: none;
+              background-color: $dark;
+              border-right: 1px solid rgba(#fff, $border-opocity);
+              margin-left: -5px;
+
+              &:last-child {
+                border: none;
+
+                &:after {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 3px;
+                  height: 100%;
+                  background-color: $accent;
+                }
+              }
+            }
+          }
+        }
+
+        .slider-pagination {
+          flex: 0 0 140px;
+        }
+
+        .slider-scrollbar {
+          flex: 1 0 0;
+        }
+
+        .slider-navigation {
+          flex: 0 0 140px;
+        }
+      }
+    }
+
   }
 
 }
